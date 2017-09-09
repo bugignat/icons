@@ -1,0 +1,22 @@
+.icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.025);
+  line-height: 0;
+  cursor: pointer;
+  outline: none;
+  transform: scale3d(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.iconActive {
+  transform: scale3d(1, 1, 1);
+}
