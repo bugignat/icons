@@ -17,16 +17,14 @@
   background-size: 80px;
   background-repeat: no-repeat;
   background-image: url('./assets/ic_cancel_dotty_80px.svg');
-  /*opacity: 0.12;*/
   transform: translate(-50%, -50%);
 }
 
 .subCategory {
-  font-family: sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #bbb;
+  color: rgba(0, 0, 0, 0.4);
 }

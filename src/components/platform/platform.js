@@ -32,7 +32,7 @@ class Platform extends Component {
         className={platform !== currentPlatform ? 'platform' : 'platformActive'}>
         {title}
         <Ripple
-          style={{color: '#fff'}}
+          style={{color: '#2979FF'}}
           background={true}
         />
       </button>

@@ -20,7 +20,7 @@ class Icon extends Component {
       this.setState({
         visible: true
       })
-    },100)
+    }, 100)
   }
 
   download(e) {
@@ -51,10 +51,10 @@ class Icon extends Component {
     });
     return (
       <button
-        title={icon.name}
+        title={icon.category + '/' + icon.name}
         onClick={this.download}
         className={iconClass}
-        style={{padding: (100 - size) / 2, transitionDelay: delay/10 + 's'}}>
+        style={{padding: (100 - size) / 2, transitionDelay: delay / 50 + 's'}}>
         <div dangerouslySetInnerHTML={{__html: icon.svg}}/>
         <Ripple
           style={{color: '#2979FF'}}

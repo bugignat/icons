@@ -25,7 +25,7 @@ class Category extends Component {
         className={category !== currentCategory ? 'category' : 'categoryActive'}>
         {title}
         <Ripple
-          style={{color: '#fff'}}
+          style={{color: '#2979FF'}}
           background={true}
         />
       </button>

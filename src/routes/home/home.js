@@ -32,11 +32,13 @@ class Home extends Component {
           <div className="searchContainer">
             <Search/>
           </div>
-          <div className="platformsContainer">
-            <Platforms platforms={platforms}/>
-          </div>
-          <div className="categoriesContainer">
-            <Categories categories={categories}/>
+          <div className="filtersContainer">
+            <div className="platformsContainer">
+              <Platforms platforms={platforms}/>
+            </div>
+            <div className="categoriesContainer">
+              <Categories categories={categories}/>
+            </div>
           </div>
         </div>
         <div className="contentContainer">
