@@ -1,7 +1,15 @@
-const setColor = (state = false, action) => {
+const defaultState = {
+  isColor: false,
+  value: '#000000'
+};
 
-  if (action.type === 'SET_COLOR') {
-    return action.color;
+const setColor = (state = defaultState, action) => {
+
+  if (action.type === 'SET_IS_COLOR') {
+    const isColor = {
+      isColor: action.isColor
+    };
+    return isColor;
   } else {
     return state;
   }

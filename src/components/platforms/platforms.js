@@ -12,7 +12,7 @@ class Platforms extends Component {
               key={index}
               title={platform.title}
               size={platform.size}
-              color={platform.isColor}
+              isColor={platform.isColor}
               platform={platform.apiCode}/>
           )
         }

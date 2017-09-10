@@ -7,6 +7,7 @@ import getCategoryIcons from '../../actions/getCategoryIcons';
 import Platforms from '../../components/platforms/platforms';
 import Categories from '../../components/categories/categories';
 import Search from '../../components/search/search';
+import Color from '../../components/color/color';
 import Icons from '../../components/icons/icons';
 
 import './home.css';
@@ -22,13 +23,18 @@ class Home extends Component {
 
   render() {
 
-    const {platforms, categories, icons} = this.props;
+    const {platforms, categories, icons, isColor} = this.props;
 
     return (
       <div className="container">
         <div className="panelContainer">
-          <div className="searchContainer">
+          <div className="topContainer">
             <Search/>
+            {
+              !isColor
+                ? <Color/>
+                : null
+            }
           </div>
           <div className="filtersContainer">
             <div className="platformsContainer">
@@ -54,7 +60,8 @@ const mapStateToProps = state => ({
   platform: state.platform,
   categories: state.categories,
   category: state.category,
-  icons: state.icons
+  icons: state.icons,
+  isColor: state.color.isColor
 });
 
 const mapDispatchToProps = dispatch => ({
