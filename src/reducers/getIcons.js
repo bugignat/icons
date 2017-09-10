@@ -6,7 +6,7 @@ const getIcons = (state = [], action) => {
     case 'GET_SEARCH_ICONS':
       const searchIcons = [
         {
-          subcategory_name: 'Search: ' + action.term,
+          subcategory_name: action.term,
           icons: action.icons
         }
       ];

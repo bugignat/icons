@@ -13,14 +13,33 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: left;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.4);
   outline: none;
   cursor: pointer;
   user-select: none;
+  transition: 0.3s;
+}
+
+.platformText {
+  vertical-align: middle;
+}
+
+.platformCaret {
+  display: inline-block;
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-image: url('./assets/ic_forward_androidl_24px.svg');
+  vertical-align: middle;
+  opacity: 0.2;
+  transition: 0.3s;
 }
 
 .platform:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .platformActive {

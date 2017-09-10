@@ -12,8 +12,15 @@ class Search extends Component {
 
   constructor(props) {
     super(props);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.changeValue = this.changeValue.bind(this);
     this.search = this.search.bind(this);
+  }
+
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      this.search();
+    }
   }
 
   changeValue(e) {
@@ -23,8 +30,10 @@ class Search extends Component {
 
   search() {
     const {search, currentPlatform, setCategory, getSearchIcons} = this.props;
-    setCategory('');
-    getSearchIcons(currentPlatform, search);
+    if (search !== '') {
+      setCategory('');
+      getSearchIcons(currentPlatform, search);
+    }
   }
 
   render() {
@@ -36,6 +45,7 @@ class Search extends Component {
           type="text"
           placeholder={'Search...'}
           onChange={this.changeValue}
+          onKeyPress={this.handleKeyPress}
           value={search}/>
         <button
           onClick={this.search}

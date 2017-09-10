@@ -16,7 +16,7 @@ class Icons extends Component {
             ? <div className="preloader">
               <MDSpinner
                 singleColor={'#2979FF'}
-                size={48}/>
+                size={28}/>
             </div>
             : icons.map((subcategory, index) =>
               <div key={index}>

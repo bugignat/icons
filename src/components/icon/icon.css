@@ -3,9 +3,9 @@
   width: 100px;
   height: 100px;
   margin: 8px;
-  border-radius: 3px;
+  border-radius: 6px;
   border: none;
-  background-color: rgba(0, 0, 0, 0.025);
+  background-color: transparent;
   line-height: 0;
   cursor: pointer;
   outline: none;
@@ -14,7 +14,7 @@
 }
 
 .icon:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.01);
 }
 
 .iconActive {

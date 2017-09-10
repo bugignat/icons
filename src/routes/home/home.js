@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import getPlatforms from '../../actions/getPlatforms';
 import getCategories from '../../actions/getCategories';
-import setSize from '../../actions/setSize';
 import getCategoryIcons from '../../actions/getCategoryIcons';
 import Platforms from '../../components/platforms/platforms';
 import Categories from '../../components/categories/categories';
@@ -15,11 +14,10 @@ import './home.css';
 class Home extends Component {
 
   componentWillMount() {
-    const {platform, size, category} = this.props;
-    this.props.getPlatforms();
-    this.props.getCategories(platform);
-    this.props.setSize(size);
-    this.props.getCategoryIcons(platform, category);
+    const {platform, category, getPlatforms, getCategories, getCategoryIcons} = this.props;
+    getPlatforms();
+    getCategories(platform);
+    getCategoryIcons(platform, category);
   }
 
   render() {
@@ -56,14 +54,12 @@ const mapStateToProps = state => ({
   platform: state.platform,
   categories: state.categories,
   category: state.category,
-  icons: state.icons,
-  size: state.size
+  icons: state.icons
 });
 
 const mapDispatchToProps = dispatch => ({
   getPlatforms: bindActionCreators(getPlatforms, dispatch),
   getCategories: bindActionCreators(getCategories, dispatch),
-  setSize: bindActionCreators(setSize, dispatch),
   getCategoryIcons: bindActionCreators(getCategoryIcons, dispatch)
 });
 
