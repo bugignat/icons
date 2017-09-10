@@ -39,7 +39,7 @@
 }
 
 .search input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .search button {
