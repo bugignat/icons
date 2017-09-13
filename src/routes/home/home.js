@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import getPlatforms from '../../actions/getPlatforms';
-import getCategories from '../../actions/getCategories';
-import getCategoryIcons from '../../actions/getCategoryIcons';
 import Platforms from '../../components/platforms/platforms';
 import Categories from '../../components/categories/categories';
 import Search from '../../components/search/search';
@@ -14,10 +12,8 @@ import './home.css';
 class Home extends Component {
 
   componentDidMount() {
-    const {platform, category, getPlatforms, getCategories, getCategoryIcons} = this.props;
+    const {getPlatforms} = this.props;
     getPlatforms();
-    getCategories(platform);
-    getCategoryIcons(platform, category);
   }
 
   render() {
@@ -51,16 +47,12 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
   platforms: state.platforms,
-  platform: state.platform,
   categories: state.categories,
-  category: state.category,
   icons: state.icons
 });
 
 const mapDispatchToProps = dispatch => ({
-  getPlatforms: bindActionCreators(getPlatforms, dispatch),
-  getCategories: bindActionCreators(getCategories, dispatch),
-  getCategoryIcons: bindActionCreators(getCategoryIcons, dispatch)
+  getPlatforms: bindActionCreators(getPlatforms, dispatch)
 });
 
 Home = connect(mapStateToProps, mapDispatchToProps)(Home);

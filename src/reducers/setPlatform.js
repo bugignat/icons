@@ -1,4 +1,4 @@
-const setPlatform = (state = 'ios7', action) => {
+const setPlatform = (state = '', action) => {
 
   if (action.type === 'SET_PLATFORM') {
     return action.platform;

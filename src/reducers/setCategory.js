@@ -1,4 +1,4 @@
-const setCategory = (state = 'alphabet', action) => {
+const setCategory = (state = '', action) => {
 
   if (action.type === 'SET_CATEGORY') {
     return action.category;

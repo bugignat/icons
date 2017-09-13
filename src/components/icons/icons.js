@@ -33,7 +33,7 @@ class Icons extends Component {
             )
         }
         {
-          !fetchingIcons && (icons.length < 1 || icons[0].icons.length < 1)
+          !fetchingIcons && icons.length > 0 && icons[0].icons.length < 1
             ? <div className="empty"/>
             : null
         }
