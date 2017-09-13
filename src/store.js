@@ -8,7 +8,6 @@ import category from './reducers/setCategory';
 import search from './reducers/setSearch';
 import icons from './reducers/getIcons';
 import fetchingIcons from './reducers/fetchingIcons';
-import color from './reducers/setColor';
 import size from './reducers/setSize';
 
 const Store = () => {
@@ -20,7 +19,6 @@ const Store = () => {
     search,
     icons,
     fetchingIcons,
-    color,
     size
   });
 

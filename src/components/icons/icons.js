@@ -14,10 +14,10 @@ class Icons extends Component {
         {
           fetchingIcons
             ? <div className="preloader">
-              <MDSpinner
-                singleColor={'#2979FF'}
-                size={28}/>
-            </div>
+                <MDSpinner
+                  singleColor={'#2979FF'}
+                  size={28}/>
+              </div>
             : icons.map((subcategory, index) =>
               <div key={index}>
                 <div className="subCategory">{subcategory.subcategory_name}</div>

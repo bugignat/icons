@@ -1,13 +1,14 @@
 import {apiGetPlatforms} from './../api/api';
 
-const getPlatforms = () => (dispatch) => {
+const getPlatforms = () => (dispatch, getState) => {
   return apiGetPlatforms()
-    .then(response => (
+    .then(response => {
+      const platforms = response.data.result;
       dispatch({
         type: 'GET_PLATFORMS',
-        platforms: response.data.result
-      })
-    )).catch(error => (
+        platforms
+      });
+    }).catch(error => (
       console.error('error', error)
     ));
 };

@@ -49,13 +49,17 @@ class Search extends Component {
           value={search}/>
         <button
           onClick={this.search}
-          disabled={search === ''}>
+          disabled={!search}>
           Find
-          <Ripple
-            style={{color: '#fff'}}
-            background={true}
-            duration={1000}
-          />
+          {
+            search
+              ? <Ripple
+                style={{color: '#fff'}}
+                background={true}
+                duration={1000}
+              />
+              : null
+          }
         </button>
       </div>
     );
