@@ -22,7 +22,7 @@ class Home extends Component {
 
   render() {
 
-    const {platforms, categories, icons, isColor} = this.props;
+    const {platforms, categories, icons} = this.props;
 
     return (
       <div className="container">

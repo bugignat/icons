@@ -43,21 +43,17 @@ class Search extends Component {
         <span className="iconSearch"/>
         <input
           type="text"
-          placeholder={'Search...'}
+          placeholder={'Type something...'}
           onChange={this.changeValue}
           onKeyPress={this.handleKeyPress}
           value={search}/>
         <button
           onClick={this.search}
           disabled={!search}>
-          Find
+          Search
           {
             search
-              ? <Ripple
-                style={{color: '#fff'}}
-                background={true}
-                duration={1000}
-              />
+              ? <Ripple style={{color: '#fff'}}/>
               : null
           }
         </button>

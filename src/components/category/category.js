@@ -24,10 +24,7 @@ class Category extends Component {
         onClick={this.setCategory.bind(this)}
         className={category !== currentCategory ? 'category' : 'categoryActive'}>
         {title}
-        <Ripple
-          style={{color: '#2979FF'}}
-          background={true}
-        />
+        <Ripple style={{color: '#2979FF'}}/>
       </button>
     );
   }
