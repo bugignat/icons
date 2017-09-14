@@ -11,7 +11,6 @@ class Platforms extends Component {
             <Platform
               key={index}
               title={platform.title}
-              size={platform.size}
               platform={platform.apiCode}/>
           )
         }

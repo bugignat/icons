@@ -1,4 +1,4 @@
-export const setSize = (state = 50, action) => {
+export const setSize = (state = '', action) => {
 
   if (action.type === 'SET_SIZE') {
     return action.size;

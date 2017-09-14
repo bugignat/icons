@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {setCategory} from '../../actions/setCategory';
-import {getCategoryIcons} from '../../actions/getCategoryIcons';
 import {setSearch} from '../../actions/setSearch';
 import Ripple from 'react-ink';
 
@@ -11,27 +10,13 @@ import './Category.css';
 class Category extends Component {
 
   setCategory = () => {
-    const {
-      currentPlatform,
-      category,
-      setSearch,
-      setCategory,
-      getCategoryIcons
-    } = this.props;
-
+    const {category, setSearch, setCategory} = this.props;
     setSearch('');
-    setCategory(category);
-    getCategoryIcons(currentPlatform, category);
+    setCategory(category)
   };
 
   render() {
-
-    const {
-      title,
-      category,
-      currentCategory
-    } = this.props;
-
+    const {title, category, currentCategory} = this.props;
     return (
       <button
         onClick={this.setCategory}
@@ -50,7 +35,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setCategory: bindActionCreators(setCategory, dispatch),
-  getCategoryIcons: bindActionCreators(getCategoryIcons, dispatch),
   setSearch: bindActionCreators(setSearch, dispatch)
 });
 

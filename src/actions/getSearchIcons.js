@@ -1,6 +1,7 @@
 import {apiGetSearchIcons} from '../api/api';
+import {setSize} from '../actions/setSize';
 
-export const getSearchIcons = (platform, term) => (dispatch) => {
+export const getSearchIcons = (platform, term) => (dispatch, getState) => {
 
   dispatch({
     type: 'FETCHING_ICONS_REQUEST'
@@ -13,11 +14,19 @@ export const getSearchIcons = (platform, term) => (dispatch) => {
         icons: response.data.result.search,
         term: term
       })
-    )).then(() => (
+    ))
+    .then(() => {
+      const platforms = getState().platforms;
+      const currentPlatform = platforms.filter(platform => platform.apiCode === getState().platform);
+      const iconSize = +currentPlatform[0].size;
+      dispatch(setSize(iconSize));
+    })
+    .then(() => (
       dispatch({
         type: 'FETCHING_ICONS_SUCCESS'
       })
-    )).catch(error => (
-      console.error('error', error)
     ))
+    .catch(error => {
+      console.error('error', error)
+    })
 };

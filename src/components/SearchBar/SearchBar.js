@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {setSearch} from '../../actions/setSearch';
 import {setCategory} from '../../actions/setCategory';
-import {getSearchIcons} from '../../actions/getSearchIcons';
 import Ripple from 'react-ink';
 
 import './SearchBar.css';
@@ -24,14 +23,11 @@ class Search extends Component {
   search = () => {
     const {
       search,
-      currentPlatform,
       setCategory,
-      getSearchIcons
     } = this.props;
 
     if (search !== '') {
       setCategory('');
-      getSearchIcons(currentPlatform, search);
     }
   };
 
@@ -62,14 +58,12 @@ class Search extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentPlatform: state.platform,
   search: state.search
 });
 
 const mapDispatchToProps = dispatch => ({
   setSearch: bindActionCreators(setSearch, dispatch),
   setCategory: bindActionCreators(setCategory, dispatch),
-  getSearchIcons: bindActionCreators(getSearchIcons, dispatch)
 });
 
 Search = connect(mapStateToProps, mapDispatchToProps)(Search);
