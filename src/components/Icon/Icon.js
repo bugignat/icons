@@ -19,7 +19,7 @@ class Icon extends Component {
       this.setState({
         visible: true
       })
-    }, 100)
+    })
   }
 
   download = event => {
