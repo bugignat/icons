@@ -48,6 +48,7 @@ class Icon extends Component {
       'icon': true,
       'iconActive': this.state.visible
     });
+
     return (
       <button
         title={icon.category + '/' + icon.name}

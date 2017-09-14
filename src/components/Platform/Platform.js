@@ -15,6 +15,7 @@ class Platform extends Component {
 
   render() {
     const {title, platform, currentPlatform} = this.props;
+
     return (
       <button
         onClick={this.setPlatform}

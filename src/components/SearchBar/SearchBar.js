@@ -33,6 +33,7 @@ class Search extends Component {
 
   render() {
     const {search} = this.props;
+
     return (
       <div className="search">
         <span className="iconSearch"/>

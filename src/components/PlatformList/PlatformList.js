@@ -4,6 +4,7 @@ import Platform from '../../components/Platform/Platform';
 class Platforms extends Component {
   render() {
     const {platforms} = this.props;
+
     return (
       <div>
         {

@@ -17,6 +17,7 @@ class Category extends Component {
 
   render() {
     const {title, category, currentCategory} = this.props;
+
     return (
       <button
         onClick={this.setCategory}
