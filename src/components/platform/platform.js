@@ -32,8 +32,7 @@ class Platform extends Component {
         className={platform !== currentPlatform ? 'platform' : 'platformActive'}>
         <span className="platformText">{title}</span>
         <span className="platformCaret"/>
-        <Ripple style={{color: '#2979FF'}}
-        />
+        <Ripple style={{color: '#2979FF'}}/>
       </button>
     )
   }
