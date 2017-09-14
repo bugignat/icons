@@ -5,7 +5,7 @@ import getCategories from '../actions/getCategories';
 import setCategory from '../actions/setCategory';
 import getCategoryIcons from '../actions/getCategoryIcons';
 
-const getPlatforms = () => (dispatch, getState) => {
+export const getContent = () => (dispatch, getState) => {
   return apiGetPlatforms()
     .then(response => {
       const platforms = response.data.result;
@@ -39,5 +39,3 @@ const getPlatforms = () => (dispatch, getState) => {
       console.error('error', error)
     ));
 };
-
-export default getPlatforms;
