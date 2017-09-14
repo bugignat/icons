@@ -33,7 +33,7 @@ class Icon extends Component {
     const svgUrl = URL.createObjectURL(svgBlob);
     const downloadLink = document.createElement('a');
     downloadLink.href = svgUrl;
-    downloadLink.download = fileName.toLowerCase().replace(' ', '_') + '.svg';
+    downloadLink.download = fileName.toLowerCase().replace(' ', '_').replace('.', '') + '.svg';
     document.body.appendChild(downloadLink);
 
     setTimeout(() => {
