@@ -1,6 +1,6 @@
 import {apiGetCategoryIcons} from './../api/api';
 
-const getCategoryIcons = (platform, category) => (dispatch) => {
+export const getCategoryIcons = (platform, category) => (dispatch) => {
 
   dispatch({
     type: 'FETCHING_ICONS_REQUEST'
@@ -20,5 +20,3 @@ const getCategoryIcons = (platform, category) => (dispatch) => {
       console.error('error', error)
     ))
 };
-
-export default getCategoryIcons;

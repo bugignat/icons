@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {setCategory} from '../../actions/setCategory';
+import {getCategoryIcons} from '../../actions/getCategoryIcons';
+import {setSearch} from '../../actions/setSearch';
 import Ripple from 'react-ink';
-import setCategory from '../../actions/setCategory';
-import getCategoryIcons from '../../actions/getCategoryIcons';
-import setSearch from '../../actions/setSearch';
 
 import './category.css';
 

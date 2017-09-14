@@ -1,6 +1,6 @@
 import {apiGetCategories} from './../api/api';
 
-const getCategories = (platform) => (dispatch) => {
+export const getCategories = (platform) => (dispatch) => {
   return apiGetCategories(platform)
     .then(response => (
       dispatch({
@@ -11,5 +11,3 @@ const getCategories = (platform) => (dispatch) => {
       console.error('error', error)
     ))
 };
-
-export default getCategories;

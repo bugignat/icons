@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {setSearch} from '../../actions/setSearch';
+import {setCategory} from '../../actions/setCategory';
+import {getSearchIcons} from '../../actions/getSearchIcons';
 import Ripple from 'react-ink';
-import setSearch from '../../actions/setSearch';
-import setCategory from '../../actions/setCategory';
-import getSearchIcons from '../../actions/getSearchIcons';
 
 import './search.css';
 

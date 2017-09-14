@@ -1,9 +1,9 @@
 import {apiGetPlatforms} from '../api/api';
-import setPlatform from '../actions/setPlatform';
-import setSize from '../actions/setSize';
-import getCategories from '../actions/getCategories';
-import setCategory from '../actions/setCategory';
-import getCategoryIcons from '../actions/getCategoryIcons';
+import {setPlatform} from '../actions/setPlatform';
+import {setSize} from '../actions/setSize';
+import {getCategories} from '../actions/getCategories';
+import {setCategory} from '../actions/setCategory';
+import {getCategoryIcons} from '../actions/getCategoryIcons';
 
 export const getContent = () => (dispatch, getState) => {
   return apiGetPlatforms()

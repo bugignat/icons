@@ -1,6 +1,6 @@
 import {apiGetSearchIcons} from './../api/api';
 
-const getSearchIcons = (platform, term) => (dispatch) => {
+export const getSearchIcons = (platform, term) => (dispatch) => {
 
   dispatch({
     type: 'FETCHING_ICONS_REQUEST'
@@ -21,5 +21,3 @@ const getSearchIcons = (platform, term) => (dispatch) => {
       console.error('error', error)
     ))
 };
-
-export default getSearchIcons;

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {setPlatform} from '../../actions/setPlatform';
+import {getCategories} from '../../actions/getCategories';
+import {setCategory} from '../../actions/setCategory';
+import {setSize} from '../../actions/setSize';
+import {getCategoryIcons} from '../../actions/getCategoryIcons';
+import {getSearchIcons} from '../../actions/getSearchIcons';
 import Ripple from 'react-ink';
-import setPlatform from '../../actions/setPlatform';
-import getCategories from '../../actions/getCategories';
-import setCategory from '../../actions/setCategory';
-import setSize from '../../actions/setSize';
-import getCategoryIcons from '../../actions/getCategoryIcons';
-import getSearchIcons from '../../actions/getSearchIcons';
 
 import './platform.css';
 
