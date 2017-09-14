@@ -5,15 +5,28 @@
   -webkit-font-smoothing: antialiased;
 }
 
-*::-webkit-scrollbar-track {
-  background-color: rgba(0,0,0,0.01);
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
 }
 
-*::-webkit-scrollbar {
-  width: 6px;
-  background-color: rgba(0,0,0,0.01);
+::-webkit-scrollbar-button {
+  width: 4px;
+  height: 4px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: #2979FF;
+::-webkit-scrollbar-thumb {
+  background: #2979FF;
+  border: none;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.01);
+  border: none;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
