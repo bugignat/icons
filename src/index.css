@@ -1,4 +1,4 @@
-@import "fonts/roboto.css";
+@import "./fonts/Roboto.css";
 
 * {
   font-family: 'Roboto', sans-serif !important;

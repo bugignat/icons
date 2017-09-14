@@ -1,4 +1,4 @@
-import {apiGetCategoryIcons} from './../api/api';
+import {apiGetCategoryIcons} from '../api/api';
 
 export const getCategoryIcons = (platform, category) => (dispatch) => {
 

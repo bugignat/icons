@@ -1,4 +1,4 @@
-import {apiGetSearchIcons} from './../api/api';
+import {apiGetSearchIcons} from '../api/api';
 
 export const getSearchIcons = (platform, term) => (dispatch) => {
 

@@ -1,4 +1,4 @@
-import {apiGetCategories} from './../api/api';
+import {apiGetCategories} from '../api/api';
 
 export const getCategories = (platform) => (dispatch) => {
   return apiGetCategories(platform)
