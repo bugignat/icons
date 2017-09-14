@@ -1,4 +1,4 @@
-const getCategories = (state = [], action) => {
+export const getCategories = (state = [], action) => {
 
   if (action.type === 'GET_CATEGORIES') {
     return action.categories;
@@ -7,5 +7,3 @@ const getCategories = (state = [], action) => {
   }
 
 };
-
-export default getCategories;

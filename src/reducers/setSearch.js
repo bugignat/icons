@@ -1,4 +1,4 @@
-const setSearch = (state = '', action) => {
+export const setSearch = (state = '', action) => {
 
   if (action.type === 'SET_SEARCH') {
     return action.search;
@@ -7,5 +7,3 @@ const setSearch = (state = '', action) => {
   }
 
 };
-
-export default setSearch;

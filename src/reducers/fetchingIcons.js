@@ -1,4 +1,4 @@
-const fetchingIcons = (state = false, action) => {
+export const fetchingIcons = (state = false, action) => {
 
   switch (action.type) {
     case 'FETCHING_ICONS_REQUEST':
@@ -11,5 +11,3 @@ const fetchingIcons = (state = false, action) => {
   }
 
 };
-
-export default fetchingIcons;

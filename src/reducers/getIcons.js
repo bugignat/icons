@@ -1,4 +1,4 @@
-const getIcons = (state = [], action) => {
+export const getIcons = (state = [], action) => {
 
   switch (action.type) {
     case 'GET_CATEGORY_ICONS':
@@ -16,5 +16,3 @@ const getIcons = (state = [], action) => {
   }
 
 };
-
-export default getIcons;

@@ -1,4 +1,4 @@
-const getPlatforms = (state = [], action) => {
+export const getPlatforms = (state = [], action) => {
 
   if (action.type === 'GET_PLATFORMS') {
     let platforms = Object.values(action.platforms);
@@ -9,5 +9,3 @@ const getPlatforms = (state = [], action) => {
   }
 
 };
-
-export default getPlatforms;

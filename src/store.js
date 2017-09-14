@@ -1,14 +1,14 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {createLogger} from 'redux-logger';
-import platforms from './reducers/getPlatforms';
-import platform from './reducers/setPlatform';
-import categories from './reducers/getCategories';
-import category from './reducers/setCategory';
-import search from './reducers/setSearch';
-import icons from './reducers/getIcons';
-import fetchingIcons from './reducers/fetchingIcons';
-import size from './reducers/setSize';
+import {getPlatforms as platforms} from './reducers/getPlatforms';
+import {setPlatform as platform} from './reducers/setPlatform';
+import {getCategories as categories} from './reducers/getCategories';
+import {setCategory as category} from './reducers/setCategory';
+import {setSearch as search} from './reducers/setSearch';
+import {getIcons as icons} from './reducers/getIcons';
+import {fetchingIcons} from './reducers/fetchingIcons';
+import {setSize as size} from './reducers/setSize';
 
 const Store = () => {
   const appReducer = combineReducers({

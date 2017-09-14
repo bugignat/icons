@@ -1,4 +1,4 @@
-const setPlatform = (state = '', action) => {
+export const setPlatform = (state = '', action) => {
 
   if (action.type === 'SET_PLATFORM') {
     return action.platform;
@@ -7,5 +7,3 @@ const setPlatform = (state = '', action) => {
   }
 
 };
-
-export default setPlatform;

@@ -1,4 +1,4 @@
-const setCategory = (state = '', action) => {
+export const setCategory = (state = '', action) => {
 
   if (action.type === 'SET_CATEGORY') {
     return action.category;
@@ -7,5 +7,3 @@ const setCategory = (state = '', action) => {
   }
 
 };
-
-export default setCategory;
