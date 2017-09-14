@@ -10,7 +10,7 @@ class Categories extends Component {
         {
           categories.map((category, index) =>
             <Category
-              key={index}
+              key={`category-${index}`}
               title={category.name}
               category={category.api_code}/>
           )

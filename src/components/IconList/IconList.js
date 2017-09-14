@@ -25,7 +25,7 @@ class Icons extends Component {
                 {
                   subcategory.icons.map((icon, index) =>
                     <Icon
-                      key={index}
+                      key={`icon-${index}`}
                       icon={icon}
                       delay={index}/>
                   )

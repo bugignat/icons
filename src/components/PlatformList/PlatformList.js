@@ -10,7 +10,7 @@ class Platforms extends Component {
         {
           platforms.map((platform, index) =>
             <Platform
-              key={index}
+              key={`platform-${index}`}
               title={platform.title}
               platform={platform.apiCode}/>
           )
