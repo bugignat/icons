@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Store from './store';
-import Home from './routes/home/home';
+import Home from './routes/Home/Home';
 
 const store = Store();
 

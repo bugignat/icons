@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Platform from '../../components/platform/platform';
+import Platform from '../../components/Platform/Platform';
 
 class Platforms extends Component {
   render() {

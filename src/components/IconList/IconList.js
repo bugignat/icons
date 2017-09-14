@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import MDSpinner from 'react-md-spinner';
-import Icon from '../icon/icon';
+import Icon from '../Icon/Icon';
 
-import './icons.css';
+import './IconList.css';
 
 class Icons extends Component {
 

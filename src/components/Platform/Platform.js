@@ -9,7 +9,7 @@ import {getCategoryIcons} from '../../actions/getCategoryIcons';
 import {getSearchIcons} from '../../actions/getSearchIcons';
 import Ripple from 'react-ink';
 
-import './platform.css';
+import './Platform.css';
 
 class Platform extends Component {
 

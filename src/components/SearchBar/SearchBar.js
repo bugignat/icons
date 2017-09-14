@@ -6,7 +6,7 @@ import {setCategory} from '../../actions/setCategory';
 import {getSearchIcons} from '../../actions/getSearchIcons';
 import Ripple from 'react-ink';
 
-import './search.css';
+import './SearchBar.css';
 
 class Search extends Component {
 

@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {getContent} from '../../actions/getContent';
-import Platforms from '../../components/platforms/platforms';
-import Categories from '../../components/categories/categories';
-import Search from '../../components/search/search';
-import Icons from '../../components/icons/icons';
+import PlatformList from '../../components/PlatformList/PlatformList';
+import CategoryList from '../../components/CategoryList/CategoryList';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import IconList from '../../components/IconList/IconList';
 
-import './home.css';
+import './Home.css';
 
 class Home extends Component {
 
@@ -24,20 +24,20 @@ class Home extends Component {
       <div className="container">
         <div className="panelContainer">
           <div className="topContainer">
-            <Search/>
+            <SearchBar/>
           </div>
           <div className="filtersContainer">
             <div className="platformsContainer">
-              <Platforms platforms={platforms}/>
+              <PlatformList platforms={platforms}/>
             </div>
             <div className="categoriesContainer">
-              <Categories categories={categories}/>
+              <CategoryList categories={categories}/>
             </div>
           </div>
         </div>
         <div className="contentContainer">
           <div className="iconsContainer">
-            <Icons icons={icons}/>
+            <IconList icons={icons}/>
           </div>
         </div>
       </div>

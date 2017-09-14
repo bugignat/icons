@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import classnames from 'classnames';
 import Ripple from 'react-ink';
 
-import './icon.css';
+import './Icon.css';
 
 class Icon extends Component {
 

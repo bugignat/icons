@@ -6,7 +6,7 @@ import {getCategoryIcons} from '../../actions/getCategoryIcons';
 import {setSearch} from '../../actions/setSearch';
 import Ripple from 'react-ink';
 
-import './category.css';
+import './Category.css';
 
 class Category extends Component {
 
