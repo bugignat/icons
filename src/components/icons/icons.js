@@ -8,7 +8,11 @@ import './icons.css';
 class Icons extends Component {
 
   render() {
-    const {fetchingIcons, icons} = this.props;
+    const {
+      fetchingIcons,
+      icons
+    } = this.props;
+
     return (
       <div>
         {

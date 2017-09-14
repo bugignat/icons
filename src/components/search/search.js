@@ -10,31 +10,30 @@ import './search.css';
 
 class Search extends Component {
 
-  constructor(props) {
-    super(props);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.changeValue = this.changeValue.bind(this);
-    this.search = this.search.bind(this);
-  }
-
-  handleKeyPress(e) {
-    if (e.key === 'Enter') {
+  handleKeyPress = event => {
+    if (event.key === 'Enter') {
       this.search();
     }
-  }
+  };
 
-  changeValue(e) {
+  changeValue = event => {
     const {setSearch} = this.props;
-    setSearch(e.target.value);
-  }
+    setSearch(event.target.value);
+  };
 
-  search() {
-    const {search, currentPlatform, setCategory, getSearchIcons} = this.props;
+  search = () => {
+    const {
+      search,
+      currentPlatform,
+      setCategory,
+      getSearchIcons
+    } = this.props;
+
     if (search !== '') {
       setCategory('');
       getSearchIcons(currentPlatform, search);
     }
-  }
+  };
 
   render() {
     const {search} = this.props;

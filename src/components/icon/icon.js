@@ -11,8 +11,7 @@ class Icon extends Component {
     super(props);
     this.state = {
       visible: false
-    };
-    this.download = this.download.bind(this);
+    }
   }
 
   componentDidMount() {
@@ -23,13 +22,13 @@ class Icon extends Component {
     }, 100)
   }
 
-  download(e) {
+  download = event => {
     const {icon, size} = this.props;
     const fileName = 'ic_' + icon.name + '_' + icon.platform_code + '_' + size + 'px';
-    const svg = e.currentTarget.getElementsByTagName('svg')[0];
+    const svg = event.currentTarget.getElementsByTagName('svg')[0];
     svg.setAttribute('width', size);
     svg.setAttribute('height', size);
-    const svgData = e.currentTarget.getElementsByTagName('svg')[0].outerHTML;
+    const svgData = event.currentTarget.getElementsByTagName('svg')[0].outerHTML;
     const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
     const svgUrl = URL.createObjectURL(svgBlob);
     const downloadLink = document.createElement('a');
@@ -41,7 +40,7 @@ class Icon extends Component {
       downloadLink.click();
       document.body.removeChild(downloadLink);
     }, 500)
-  }
+  };
 
   render() {
     const {icon, size, delay} = this.props;

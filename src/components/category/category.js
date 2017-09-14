@@ -10,18 +10,31 @@ import './category.css';
 
 class Category extends Component {
 
-  setCategory() {
-    const {currentPlatform, category, setSearch, setCategory, getCategoryIcons} = this.props;
+  setCategory = () => {
+    const {
+      currentPlatform,
+      category,
+      setSearch,
+      setCategory,
+      getCategoryIcons
+    } = this.props;
+
     setSearch('');
     setCategory(category);
     getCategoryIcons(currentPlatform, category);
-  }
+  };
 
   render() {
-    const {title, category, currentCategory} = this.props;
+
+    const {
+      title,
+      category,
+      currentCategory
+    } = this.props;
+
     return (
       <button
-        onClick={this.setCategory.bind(this)}
+        onClick={this.setCategory}
         className={category !== currentCategory ? 'category' : 'categoryActive'}>
         {title}
         <Ripple style={{color: '#2979FF'}}/>

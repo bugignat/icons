@@ -13,8 +13,20 @@ import './platform.css';
 
 class Platform extends Component {
 
-  setPlatform() {
-    const {platform, size, currentCategory, search, setPlatform, getCategories, setCategory, setSize, getCategoryIcons, getSearchIcons} = this.props;
+  setPlatform = () => {
+    const {
+      platform,
+      size,
+      currentCategory,
+      search,
+      setPlatform,
+      getCategories,
+      setCategory,
+      setSize,
+      getCategoryIcons,
+      getSearchIcons
+    } = this.props;
+
     setPlatform(platform);
     getCategories(platform);
     setCategory(currentCategory);
@@ -22,13 +34,13 @@ class Platform extends Component {
     search === ''
       ? getCategoryIcons(platform, currentCategory)
       : getSearchIcons(platform, search)
-  }
+  };
 
   render() {
     const {title, platform, currentPlatform} = this.props;
     return (
       <button
-        onClick={this.setPlatform.bind(this)}
+        onClick={this.setPlatform}
         className={platform !== currentPlatform ? 'platform' : 'platformActive'}>
         <span className="platformText">{title}</span>
         <span className="platformCaret"/>
