@@ -1,6 +1,5 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {createLogger} from 'redux-logger';
 import {getPlatforms as platforms} from './reducers/getPlatforms';
 import {setPlatform as platform} from './reducers/setPlatform';
 import {getCategories as categories} from './reducers/getCategories';
@@ -28,10 +27,13 @@ const Store = () => {
     collapsed: true,
     duration: true,
     timestamp: true,
-    level: 'info'
+    level: 'info',
   };
 
-  middlewares.push(createLogger({...loggerOptions}));
+  if (process.env.NODE_ENV === 'development') {
+    const {createLogger} = require('redux-logger');
+    middlewares.push(createLogger({...loggerOptions}));
+  }
 
   return createStore(appReducer, applyMiddleware(...middlewares));
 };
