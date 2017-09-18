@@ -24,7 +24,14 @@ const Store = () => {
 
   const middlewares = [thunk];
 
-  middlewares.push(createLogger());
+  const loggerOptions = {
+    collapsed: true,
+    duration: true,
+    timestamp: true,
+    level: 'info'
+  };
+
+  middlewares.push(createLogger({...loggerOptions}));
 
   return createStore(appReducer, applyMiddleware(...middlewares));
 };
