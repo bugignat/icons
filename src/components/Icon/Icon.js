@@ -58,8 +58,7 @@ class Icon extends Component {
         className={iconClass}
         style={{padding: (100 - size) / 2, transitionDelay: delay / 50 + 's'}}>
         <div dangerouslySetInnerHTML={{__html: icon.svg}}/>
-        <Ripple style={{color: '#2979FF'}}
-        />
+        <Ripple style={{color: '#2979FF'}}/>
       </button>
     );
   }
