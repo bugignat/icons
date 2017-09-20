@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import classnames from 'classnames';
 import Ripple from 'react-ink';
@@ -22,20 +23,21 @@ class Icon extends Component {
     })
   }
 
-  download = event => {
+  download = () => {
     const {icon, size} = this.props;
-    const fileName = 'ic_' + icon.name + '_' + icon.platform_code + '_' + size + 'px';
-    const svg = event.currentTarget.getElementsByTagName('svg')[0];
-    svg.setAttribute('width', size);
-    svg.setAttribute('height', size);
-    const svgData = event.currentTarget.getElementsByTagName('svg')[0].outerHTML;
+    let fileName = 'ic_' + icon.name + '_' + icon.platform_code + '_' + size + 'px';
+    fileName = fileName.toLowerCase().replace(' ', '_').replace('.', '') + '.svg';
+    const buttonEl = ReactDOM.findDOMNode(this);
+    const svgEl = buttonEl.getElementsByTagName('svg')[0];
+    svgEl.setAttribute('width', size);
+    svgEl.setAttribute('height', size);
+    const svgData = svgEl.outerHTML;
     const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
     const svgUrl = URL.createObjectURL(svgBlob);
     const downloadLink = document.createElement('a');
     downloadLink.href = svgUrl;
-    downloadLink.download = fileName.toLowerCase().replace(' ', '_').replace('.', '') + '.svg';
+    downloadLink.download = fileName;
     document.body.appendChild(downloadLink);
-
     setTimeout(() => {
       downloadLink.click();
       document.body.removeChild(downloadLink);
