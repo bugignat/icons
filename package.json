@@ -8,6 +8,7 @@
     "classnames": "^2.2.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-file-download": "^0.3.5",
     "react-ink": "^6.2.0",
     "react-md-spinner": "^0.2.5",
     "react-redux": "^5.0.6",

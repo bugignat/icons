@@ -8,7 +8,7 @@ import './IconList.css';
 class Icons extends Component {
 
   render() {
-    const {fetchingIcons, icons} = this.props;
+    const {fetchingIcons, icons, size} = this.props;
 
     return (
       <div>
@@ -27,7 +27,9 @@ class Icons extends Component {
                     <Icon
                       key={`icon-${index}`}
                       icon={icon}
-                      delay={index}/>
+                      delay={index}
+                      size={size}
+                    />
                   )
                 }
               </div>

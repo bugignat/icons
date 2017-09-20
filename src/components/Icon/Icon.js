@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {connect} from 'react-redux';
-import classnames from 'classnames';
+import classNames from 'classnames';
+import fileDownload from 'react-file-download';
 import Ripple from 'react-ink';
 
 import './Icon.css';
@@ -31,22 +31,14 @@ class Icon extends Component {
     const svgEl = buttonEl.getElementsByTagName('svg')[0];
     svgEl.setAttribute('width', size);
     svgEl.setAttribute('height', size);
-    const svgData = svgEl.outerHTML;
-    const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
-    const svgUrl = URL.createObjectURL(svgBlob);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = svgUrl;
-    downloadLink.download = fileName;
-    document.body.appendChild(downloadLink);
     setTimeout(() => {
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+      fileDownload(svgEl.outerHTML, fileName);
     }, 500)
   };
 
   render() {
     const {icon, size, delay} = this.props;
-    const iconClass = classnames({
+    const iconClass = classNames({
       'icon': true,
       'iconActive': this.state.visible
     });
@@ -63,11 +55,5 @@ class Icon extends Component {
     );
   }
 }
-
-const mapStateToProps = state => ({
-  size: state.size
-});
-
-Icon = connect(mapStateToProps)(Icon);
 
 export default Icon;
