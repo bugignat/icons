@@ -25,7 +25,7 @@ class Icon extends Component {
 
   download = () => {
     const {icon, size} = this.props;
-    let fileName = 'ic_' + icon.name + '_' + icon.platform_code + '_' + size + 'px';
+    let fileName = 'ic_' + icon.name + '_' + size + 'px';
     fileName = fileName.toLowerCase().replace(' ', '_').replace('.', '') + '.svg';
     const buttonEl = ReactDOM.findDOMNode(this);
     const svgEl = buttonEl.getElementsByTagName('svg')[0];
