@@ -1,24 +1,32 @@
-import {apiGetCategories} from '../api/api';
-import {setCategory} from '../actions/setCategory';
+import { apiGetCategories } from "../api/api";
+import { setCategory } from "../actions/setCategory";
 
-export const getCategories = (platform) => (dispatch, getState) => {
-
+export const getCategories = platform => (dispatch, getState) => {
   return apiGetCategories(platform)
     .then(response => {
       const categories = response.data.result.categories;
       dispatch({
-        type: 'GET_CATEGORIES',
+        type: "GET_CATEGORIES",
         categories
-      })
+      });
+    })
+    .then(() => {
+      if (
+        getState().categories.filter(
+          category => category.api_code === getState().category
+        ).length === 0
+      ) {
+        dispatch(setCategory(""));
+      }
     })
     .then(() => {
       const category = getState().category || getState().categories[0].api_code;
-      getState().search === ''
+
+      getState().search === ""
         ? dispatch(setCategory(category))
-        : dispatch(setCategory(''))
+        : dispatch(setCategory(""));
     })
     .catch(error => {
-      console.error('error', error)
-    })
-
+      console.error("error", error);
+    });
 };
