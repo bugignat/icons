@@ -1,1 +1,1 @@
-IconsApp - [Demo](http://ign47ev.bget.ru/icons/)
+IconsApp - [Demo](https://icons47.surge.sh/)
